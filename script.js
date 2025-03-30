@@ -334,8 +334,8 @@ elements.INSTRUCTIONS_BUTTON.addEventListener("click", () => {
       "You can play with the picture settings by pressing the buttons under the screen, hover your mouse on each button to see a description of what they do." +
       "\n" +
       "\n" +
-      "This CRT TV was created by @Daniele63 at daniele63.com",
-    "\n" +
+      "This CRT TV was created by @Daniele63 at daniele63.com" +
+      "\n" +
       "\n" +
       "Visit the GitHub page if you want to save it locally on your machine: https://github.com/the-daniele/crt-tv/tree/main"
   );
