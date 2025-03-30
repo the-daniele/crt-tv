@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CRT Television Simulator</title>
+    <meta
+      name="description"
+      content="Play your own videos on this realistic CRT TV Simulator, powered by Javascript. You can play links or upload MP4 files.
+      It simulates the aperture-grill and flickering (optional) of a CRT Television, it also has a VHS filter mode and picture settings control (saturation, contrast, etc)."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <main id="crtMain">
+      <div class="crt-container">
+        <div class="crt-top"></div>
+
+        <div class="crt-middle">
+          <div class="crt-middle-left">
+            <div class="crt-speakers"></div>
+          </div>
+
+          <div class="crt-middle-middle">
+            <span id="osdInput">AV1</span>
+            <span id="osdInput3">PLAY <img src="images/vhs-play.png" /></span>
+            <span id="osdInput4">00:00:00</span>
+            <span id="osd"></span>
+            <img src="images/aperture-grill.png" id="grill" />
+            <img src="images/slot-mask.png" id="slotMask" />
+            <img src="images/static.gif" class="js-content" id="static" />
+            <img src="images/flickering.gif" id="flickering" />
+            <img src="images/vhs.gif" id="vhsFilter" />
+            <img src="images/vhs2.gif" id="vhsFilter2" />
+
+            <!-- JS Version -->
+            <iframe
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+              controls="0"
+              class="js-content"
+              id="crtOutput"
+            ></iframe>
+
+            <!-- Non JS Version -->
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLbiQ_Jf57CBWyu7z1UbCkWc79UNV4xitp"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+              allowfullscreen
+              controls="0"
+              id="crtOutputNonJS"
+              class="non-js-content"
+            ></iframe>
+          </div>
+
+          <div class="crt-middle-right">
+            <div class="crt-speakers"></div>
+          </div>
+        </div>
+
+        <div class="crt-bottom">
+          <img
+            src="images/philips.png"
+            alt="Philips Logo"
+            title="Brand: Philips"
+            class="crt-brand"
+          />
+
+          <div class="crt-bottom-bottom">
+            <div class="function-buttons">
+              <div class="buttons-groups-div">
+                <button
+                  class="pressable-buttons"
+                  id="powerSwitch"
+                  title="Power Switch"
+                >
+                  Power On
+                </button>
+                <button
+                  class="led-lights js-content"
+                  id="powerLED"
+                  title="Power LED"
+                ></button>
+                <button class="led-lights" id="vhsLED" title="VHS LED"></button>
+              </div>
+              <div class="buttons-groups-div">
+                <button
+                  class="pressable-buttons"
+                  id="reset"
+                  title="Reset Values"
+                >
+                  Reset
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="saturationUp"
+                  title="Saturation +10"
+                >
+                  S+
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="saturationDown"
+                  title="Saturation -10"
+                >
+                  S-
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="contrastUp"
+                  title="Contrast +10"
+                >
+                  C+
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="contrastDown"
+                  title="Contrast -10"
+                >
+                  C-
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="brightnessUp"
+                  title="Brightness +10"
+                >
+                  B+
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="brightnessDown"
+                  title="Brightness -10"
+                >
+                  B-
+                </button>
+              </div>
+              <div class="buttons-groups-div">
+                <button
+                  class="pressable-buttons"
+                  id="vhsMode"
+                  title="VHS Filter"
+                >
+                  VHS
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="noiseMode"
+                  title="Film Grain / Noise"
+                >
+                  Noise
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="whineMode"
+                  title="15.7KHz Whine Sound"
+                >
+                  Whine
+                </button>
+                <button
+                  class="pressable-buttons"
+                  id="flickerMode"
+                  title="CRT Flickering"
+                >
+                  Flicker On
+                </button>
+              </div>
+            </div>
+
+            <div class="composite-ports">
+              <div class="c-yellow" title="Video Input"></div>
+              <div class="c-white" title="Audio (L) Input"></div>
+              <div class="c-red" title="Audio (R) Input"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Stand Arm -->
+        <div class="crt-stand-arm"></div>
+        <!-- Table -->
+        <div class="crt-table">
+          <div class="crt-text-container">
+            <div class="site-links">
+              <a href="https://daniele63.com/" alt="My Website"
+                ><img
+                  src="https://daniele63.com/images/danieles_button.jpg"
+                  alt="Website Button"
+                  title="Back to my Website"
+              /></a>
+              <a
+                href="https://users4.smartgb.com/g/g.php?a=s&i=g44-82289-f7"
+                alt="Guestbook"
+                target="_blank"
+                title="Sign my Guestbook"
+                ><img
+                  src="https://daniele63.com/images/buttons/88tgb-button1.gif"
+                  alt="Guestbook Button"
+              /></a>
+            </div>
+
+            <div class="inputs-container">
+              <div>
+                <input
+                  type="text"
+                  id="crtInput"
+                  placeholder="Paste your (embed src=) URL here:"
+                  title="On websites that propose it, you can find the embed button and paste the src link that is between quotations"
+                />
+                <button id="avInput" title="Play current URL">Embed</button>
+                <button id="instructions" title="Instructions">Help</button>
+              </div>
+
+              <div>
+                <input
+                  type="file"
+                  id="fileInput"
+                  title="Import a video file here"
+                />
+                <button id="fileUpload" title="Play current file">
+                  Upload File
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="non-js-content no-js-warning"
+          >Enable Javascript for the buttons to work.</span
+        >
+      </div>
+    </main>
+    <script src="script.js" async defer></script>
+    <!-- No JS -->
+    <noscript>
+      <style>
+        .js-content {
+          display: none;
+        }
+        .non-js-content {
+          display: block;
+        }
+      </style>
+    </noscript>
+  </body>
+</html>
