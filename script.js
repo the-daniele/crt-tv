@@ -340,7 +340,7 @@ elements.INSTRUCTIONS_BUTTON.addEventListener("click", () => {
       "You can contact me at daniele63web@hotmail.com for any inquiries or questions." +
       "\n" +
       "\n" +
-      "Visit the GitHub page if you want to save it locally on your machine: https://github.com/the-daniele/crt-tv/tree/main"
+      "Visit the GitHub page if you want to save it locally on your machine: https://github.com/the-daniele/crt-tv/"
   );
 });
 
