@@ -334,7 +334,7 @@ elements.INSTRUCTIONS_BUTTON.addEventListener("click", () => {
       "You can play with the picture settings by pressing the buttons under the screen, hover your mouse on each button to see a description of what they do." +
       "\n" +
       "\n" +
-      "This CRT TV was coded entirely by daniele63 at daniele63.com using HTML, CSS and JavaScript." +
+      "This CRT TV was using HTML, CSS and JavaScript, for use on daniele63.com and frutigeraeroarchive.org, please do not reproduce without my authorization." +
       "\n" +
       "\n" +
       "You can contact me at daniele63web@hotmail.com for any inquiries or questions." +
